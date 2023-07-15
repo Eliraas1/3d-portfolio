@@ -13,6 +13,7 @@ import Works from "./Works";
 import Feedbacks from "./Feedback";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
+import ServiceCard from "./ServiceCard";
 
 export {
   Hero,
@@ -28,4 +29,5 @@ export {
   BallCanvas,
   ComputersCanvas,
   StarsCanvas,
+  ServiceCard,
 };
