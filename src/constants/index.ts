@@ -1,30 +1,21 @@
 import {
   mobile,
   backend,
-  creator,
   web,
   javascript,
   typescript,
-  html,
-  css,
   reactjs,
   redux,
   tailwind,
   nodejs,
   mongodb,
   git,
-  figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
-  threejs,
   sellme,
   here,
+  nextjs,
+  nestjs,
+  reactNative,
 } from "../assets";
 
 export const navLinks = [
@@ -59,14 +50,6 @@ const services = [
 
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
     name: "JavaScript",
     icon: javascript,
   },
@@ -79,8 +62,12 @@ const technologies = [
     icon: reactjs,
   },
   {
+    name: "Next JS",
+    icon: nextjs,
+  },
+  {
     name: "React Native",
-    icon: reactjs,
+    icon: reactNative,
   },
   {
     name: "Redux Toolkit",
@@ -91,20 +78,12 @@ const technologies = [
     icon: tailwind,
   },
   {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
     name: "Node JS",
     icon: nodejs,
   },
   {
     name: "Nest JS",
-    icon: figma,
-  },
-  {
-    name: "SQL",
-    icon: mongodb,
+    icon: nestjs,
   },
   {
     name: "MongoDB",
