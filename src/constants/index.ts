@@ -23,6 +23,8 @@ import {
   jobit,
   tripguide,
   threejs,
+  sellme,
+  here,
 } from "../assets";
 
 export const navLinks = [
@@ -122,14 +124,26 @@ const experiences = [
   {
     title: "React Native Developer",
     company_name: "Sellme",
-    icon: starbucks,
-    iconBg: "#383E56",
+    icon: sellme,
+    iconBg: "#AD3FF0",
     date: "July 2022 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Developing and maintaining mobile applications using React Native, Redux, and Redux-Saga for efficient state management and enhanced user experiences.",
+      "Collaborated closely with a UI/UX designer to ensure a seamless and visually appealing interface.",
+      "Utilized Reanimated, TypeScript, Redux, and RTK Query to enhance the app's functionality and user experience.",
+    ],
+  },
+  {
+    title: "Full-Stack Developer",
+    company_name: "HERE: ADHD assist",
+    icon: here,
+    iconBg: "#F2F1ED",
+    date: "Jan 2023 - July 2023",
+    points: [
+      "Developed a React Native application, designed to help people with ADHD stay organized and on top of their daily tasks.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed server-side applications, RESTful APIs, and data models using Node.js And MongoDB",
+      "Collaborated closely with a UI/UX designer to ensure a seamless and visually appealing interface",
     ],
   },
 ];
@@ -165,8 +179,12 @@ const projects = [
   {
     name: "HERE: ADHD assist",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "HERE is a task management app designed to help people with ADD/ADHD stay organized and on top of their daily tasks.",
     tags: [
+      {
+        name: "Typescript",
+        color: "blue-text-gradient",
+      },
       {
         name: "react native",
         color: "blue-text-gradient",
@@ -188,50 +206,11 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image:
+      "https://camo.githubusercontent.com/e51ca463abc0cfbd88291efdf3b2b651378194f2e14364862ae543eb4b695b49/68747470733a2f2f692e6962622e636f2f6e633346534c442f362e706e67",
+    source_code_link: "https://github.com/omeratt/HereApp-FrontEnd",
+    demo: "https://www.youtube.com/watch?v=7yljqBFDWtA",
+    store: "https://play.google.com/store/apps/details?id=com.fronend",
   },
 ];
 
