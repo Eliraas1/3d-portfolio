@@ -10,6 +10,7 @@ interface ProjectCardProps {
   tags: {
     name: string;
     color: string;
+    icon?: any;
   }[];
   image: string;
   source_code_link: string;
@@ -84,12 +85,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <h3 className="font-bold text-[23px] font-white">{name}</h3>
           <p className="mt-2 text-[14px] text-secondary">{description}</p>
         </div>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags?.map((tag) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
-              #{tag.name}
-            </p>
-          ))}
+        <div className="mt-4 flex flex-wrap gap-2 justify-center">
+          {tags?.map(
+            (tag) =>
+              tag.icon && (
+                <img src={tag.icon} className="object-contain h-1/12 w-1/12" />
+              )
+          )}
         </div>
       </Tilt>
     </motion.div>

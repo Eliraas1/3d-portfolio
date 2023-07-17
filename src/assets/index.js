@@ -25,6 +25,7 @@ import threejs from "./tech/threejs.svg";
 import nestjs from "./tech/nestjs.svg";
 import nextjs from "./tech/next-js.svg";
 import reactNative from "./tech/react-native.svg";
+import firebase from "./tech/firebase.svg";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -73,4 +74,5 @@ export {
   reactNative,
   youtube,
   googlePlay,
+  firebase,
 };
