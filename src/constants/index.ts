@@ -35,7 +35,7 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Frontend Developer",
+    title: "Web Developer",
     icon: web,
   },
   {
@@ -130,27 +130,30 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+      "Eliran is one of the most ambitious and motivated developers I have worked with. Professional at the highest level, he is an asset to any team.",
     name: "Omer Attias",
     designation: "Team Leader",
     company: "Sellme",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    image:
+      "https://media.licdn.com/dms/image/C4D03AQEIpLZuKY3vjw/profile-displayphoto-shrink_400_400/0/1643539380924?e=1695254400&v=beta&t=nP2QaR4QeaXiwlNrpIv3-cIVYhuatsvE85JQywDQyr4",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Gil Sasi",
-    designation: "Software Engineer Student",
-    company: "SCE",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Zohar",
-    designation: "CTO",
+      "Eliran effectively solved complex problems, understanding product requirements and implementing well-engineered solutions. He was also a valuable team player.",
+    name: "Micha Isaev",
+    designation: "Co-Founder & CEO",
     company: "Sellme",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    image:
+      "https://media.licdn.com/dms/image/D4D03AQGcNEdJ6UePvw/profile-displayphoto-shrink_400_400/0/1666044653898?e=1695254400&v=beta&t=6Ughm2PiNsZ2YEME3KdQPbjGEX8nA8S3QHq3t2ekq50",
+  },
+  {
+    testimonial:
+      "Eliran joined our Company as a junior engineer and proved that he's able to match the expectations and exceed them with determination and professionalism.",
+    name: "Zohar Azriel",
+    designation: "Co-Founder & CEO & CTO",
+    company: "Sellme",
+    image:
+      "https://media.licdn.com/dms/image/C4D03AQEx8I8napyohQ/profile-displayphoto-shrink_400_400/0/1628169005595?e=1695254400&v=beta&t=9GgV80pxpEp-kdyyodIeoBfH0m3kATKRDQffAGTylUg",
   },
 ];
 
@@ -162,19 +165,15 @@ const projects = [
     tags: [
       {
         name: "Typescript",
-        color: "blue-text-gradient",
+        color: "text-[#8ab4f8]",
       },
       {
         name: "react native",
-        color: "blue-text-gradient",
+        color: "text-[#61dafb]",
       },
       {
-        name: "react reanimated",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "rtk and rtk query",
-        color: "blue-text-gradient",
+        name: "redux toolkit, rtk query",
+        color: "text-[#ba8fff]",
       },
       {
         name: "node.js",
@@ -182,7 +181,7 @@ const projects = [
       },
       {
         name: "mongodb",
-        color: "green-text-gradient",
+        color: "text-[#00ED64]",
       },
     ],
     image:
