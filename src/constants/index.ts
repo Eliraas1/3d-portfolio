@@ -16,6 +16,7 @@ import {
   nextjs,
   nestjs,
   reactNative,
+  firebase,
 } from "../assets";
 
 export const navLinks = [
@@ -166,22 +167,32 @@ const projects = [
       {
         name: "Typescript",
         color: "text-[#8ab4f8]",
+        icon: typescript,
       },
       {
         name: "react native",
         color: "text-[#61dafb]",
+        icon: reactNative,
       },
       {
         name: "redux toolkit, rtk query",
         color: "text-[#ba8fff]",
+        icon: redux,
       },
       {
         name: "node.js",
         color: "green-text-gradient",
+        icon: nodejs,
       },
       {
         name: "mongodb",
         color: "text-[#00ED64]",
+        icon: mongodb,
+      },
+      {
+        name: "firebase",
+        color: "text-[#00ED64]",
+        icon: firebase,
       },
     ],
     image:
