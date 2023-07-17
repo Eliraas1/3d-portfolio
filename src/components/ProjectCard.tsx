@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Tilt } from "react-tilt";
 import { fadeIn } from "../utils/motion";
+// @ts-ignore
 import { github, googlePlay, youtube } from "../assets";
 
 interface ProjectCardProps {
@@ -45,7 +46,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <div className="relative w-full h-[230px] ">
           <img src={image} className="w-full h-full object-cover" />
         </div>
-        <div className="absolute inset-0 flex justify-start items-end flex-col m-3 card-image_hover gap-1">
+        <div className="absolute inset-0 flex justify-start items-end flex-col m-3 card-image_hover gap-2">
           <div
             className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             onClick={handlePress(source_code_link)}
@@ -89,7 +90,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {tags?.map(
             (tag) =>
               tag.icon && (
-                <img src={tag.icon} className="object-contain h-1/12 w-1/12" />
+                <img
+                  src={tag.icon}
+                  key={tag.name}
+                  className="object-contain h-1/12 w-1/12"
+                />
               )
           )}
         </div>
