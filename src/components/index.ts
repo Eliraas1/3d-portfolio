@@ -5,7 +5,7 @@ import {
   StarsCanvas,
 } from "./canvas";
 import Hero from "./Hero";
-import Navbar from "./Navbar";
+import Navbar from "./navbar/Navbar";
 import About from "./about/About";
 import Tech from "./Tech";
 import Experience from "./experience/Experience";
