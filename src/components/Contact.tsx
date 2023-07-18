@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { sendForm } from "@emailjs/browser";
@@ -6,22 +6,20 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import { EarthCanvas } from "./canvas";
 
-const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
-const PUBLIC_KEY = import.meta.env.VITE_EMAIL_PUBLIC_KEY;
+const SERVICE_ID = import.meta.env.VITE_SERVICE_ID + "sadasdasdasdasdasd";
+const PUBLIC_KEY =
+  import.meta.env.VITE_EMAIL_PUBLIC_KEY + "asdasdasdasdasdasdasdasdasd";
 const TEMPLATE_ID = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
-
+const SEC = 1000;
 interface FormFieldProps {
   name: string;
   label: string;
   onChange?: (value: string) => void;
 }
-const FormField: React.FC<FormFieldProps> = () => {
-  return <label></label>;
-};
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
-  const [success, setSuccess] = useState<boolean>();
+  const [success, setSuccess] = useState<boolean>(true);
   const [loading, setLoading] = useState<boolean>(false);
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -44,6 +42,16 @@ const Contact = () => {
         formRef?.current?.reset();
       });
   };
+
+  useEffect(() => {
+    if (success) return;
+
+    const timer = setTimeout(() => {
+      setSuccess(true);
+    }, 10 * SEC);
+    return () => clearInterval(timer);
+  }, [success]);
+
   return (
     <div className="flex xl:mt-12 xl:flex-row flex-col-reverse gap-10 overflow-visible">
       <motion.div
@@ -92,6 +100,13 @@ const Contact = () => {
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
+        {!success && (
+          <h1 className="text-red-400 text-center ">
+            I'm sorry, but there was an error sending your message. Please try
+            again later or contact through alternative means. I'm apologize for
+            any inconvenience caused
+          </h1>
+        )}
       </motion.div>
 
       <motion.div

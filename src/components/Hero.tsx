@@ -2,13 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
-import { Canvas } from "@react-three/fiber";
+import { resume, linkedin } from "../assets";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto">
+    <section className="relative w-full h-screen mx-auto flex flex-col">
       <div
-        className={`${styles.padding} absolute inset-0 top[120px] max-w-7xl mx-auto  flex flex-row items-start gap-5`}
+        className={`${styles.padding} w-full h-1/2 max-w-7xl mx-auto  flex flex-row items-start gap-5`}
       >
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915eff]" />
@@ -22,13 +22,34 @@ const Hero = () => {
             A software engineer <br className="sm:block hidden" /> who developed
             web <br className="sm:block hidden" /> and mobile applications
           </p>
+          <div className="flex mt-4 ">
+            <a
+              href="https://www.linkedin.com/in/eliran-ashtamker/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mr-4 cursor-pointer"
+            >
+              <img
+                src={linkedin}
+                alt="LinkedIn"
+                className="w-8 h-8 object-contain"
+              />
+            </a>
+            <a href={resume} download>
+              <button className="bg-[#915eff] hover:bg-[#915effb1] text-white font-bold py-1 px-4 rounded">
+                Download Resume
+              </button>
+            </a>
+          </div>
         </div>
       </div>
-      <ComputersCanvas />
+      <div className=" h-full w-full ">
+        <ComputersCanvas />
+      </div>
 
-      <div className="absolute xs:bottom-2 bottom-5 w-full flex justify-center items-center">
+      <div className="absolute xs:-bottom-10 -bottom-0 w-full flex justify-center items-center ">
         <a href="#about">
-          <div className="w-[33px] h-[55px] rounded-3xl border-4 border-secondary flex justify-center items-start p-1">
+          <div className="w-[30px] h-[55px] rounded-3xl border-4 border-secondary flex justify-center items-start p-1">
             <motion.div
               animate={{
                 y: [0, 27, 0],

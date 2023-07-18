@@ -4,12 +4,14 @@ import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
 import github from "./github.png";
+import linkedin from "./linkedin.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 import youtube from "./youtube.svg";
 import googlePlay from "./google-play.svg";
 import profileImg from "./profile-img.png";
 import profileImgRounded from "./profile-img-rounded.png";
+import resume from "./Eliran Ashtamker CV.pdf";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -29,16 +31,8 @@ import nextjs from "./tech/next-js.svg";
 import reactNative from "./tech/react-native.svg";
 import firebase from "./tech/firebase.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
 import sellme from "./company/sellme.png";
 import here from "./company/here.png";
-
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
 
 export {
   logo,
@@ -62,13 +56,6 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
   sellme,
   here,
   nestjs,
@@ -79,4 +66,6 @@ export {
   firebase,
   profileImg,
   profileImgRounded,
+  linkedin,
+  resume,
 };
