@@ -22,7 +22,10 @@ const App: React.FC = () => {
         </div>
         <About />
         <Experience />
-        <Tech />
+        <div className="relative z-0">
+          <Tech />
+          <StarsCanvas numOfStars={2000} />
+        </div>
         <Works />
         <Feedbacks />
         <div className="relative z-0">

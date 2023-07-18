@@ -6,15 +6,15 @@ import {
 } from "./canvas";
 import Hero from "./Hero";
 import Navbar from "./Navbar";
-import About from "./About";
+import About from "./about/About";
 import Tech from "./Tech";
-import Experience from "./Experience";
-import ExperienceCard from "./ExperienceCard";
-import Works from "./Works";
-import Feedbacks from "./Feedback";
+import Experience from "./experience/Experience";
+import ExperienceCard from "./experience/ExperienceCard";
+import Works from "./works/Works";
+import Feedbacks from "./feedback/Feedback";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
-import ServiceCard from "./ServiceCard";
+import ServiceCard from "./about/ServiceCard";
 
 export {
   Hero,

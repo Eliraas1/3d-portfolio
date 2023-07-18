@@ -8,6 +8,8 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 import youtube from "./youtube.svg";
 import googlePlay from "./google-play.svg";
+import profileImg from "./profile-img.png";
+import profileImgRounded from "./profile-img-rounded.png";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -75,4 +77,6 @@ export {
   youtube,
   googlePlay,
   firebase,
+  profileImg,
+  profileImgRounded,
 };

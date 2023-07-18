@@ -1,9 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Tilt } from "react-tilt";
-import { fadeIn } from "../utils/motion";
-// @ts-ignore
-import { github, googlePlay, youtube } from "../assets";
+import { fadeIn } from "../../utils/motion";
+import { github, googlePlay, youtube } from "../../assets";
 
 interface ProjectCardProps {
   name: string;

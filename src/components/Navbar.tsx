@@ -8,6 +8,7 @@ import { logo, menu, close } from "../assets";
 const Navbar = () => {
   const [active, setActive] = useState<string>("");
   const [toggle, setToggle] = useState<boolean>(false);
+
   const handleMenuClick = () => {
     setToggle((prev) => !prev);
   };
@@ -18,7 +19,6 @@ const Navbar = () => {
   };
 
   const handleLiClick = (title: string, isFromMenu?: boolean) => (e: any) => {
-    // e.preventDefault();
     setActive(title);
     if (isFromMenu) handleMenuClick();
   };
@@ -43,7 +43,7 @@ const Navbar = () => {
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={handleLiClick(link.title)}
             >
-              <a href={link.id}>{link.title}</a>
+              <a href={"#" + link.id}>{link.title}</a>
             </li>
           ))}
         </ul>
@@ -68,7 +68,7 @@ const Navbar = () => {
                   } font-poppins font-medium cursor-pointer text-[16px]`}
                   onClick={handleLiClick(link.title, true)}
                 >
-                  <a href={link.id}>{link.title}</a>
+                  <a href={"#" + link.id}>{link.title}</a>
                 </li>
               ))}
             </ul>

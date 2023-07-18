@@ -27,7 +27,7 @@ const Ball: React.FC<BallProps> = ({ icon, name }) => {
           polygonOffset
           polygonOffsetFactor={-5}
           flatShading
-          color="#fff8eb"
+          color="#efc1f0"
           attach="material"
           distort={0.3}
         />

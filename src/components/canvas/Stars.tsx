@@ -3,10 +3,14 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.cjs";
 
-interface StarsProps {}
-const Stars: React.FC<StarsProps> = (props) => {
+type StarsProps = {
+  numOfStars?: number;
+};
+const Stars: React.FC<StarsProps> = ({ numOfStars }, props) => {
   const ref = useRef();
-  const sphere = random.inSphere(new Float32Array(7000), { radius: 2 });
+  const sphere = random.inSphere(new Float32Array(numOfStars || 7000), {
+    radius: 2,
+  });
   useFrame((state, delta) => {
     ref.current.rotation.x -= delta / 40;
     ref.current.rotation.y -= delta / 30;
@@ -26,11 +30,11 @@ const Stars: React.FC<StarsProps> = (props) => {
   );
 };
 
-const StarsCanvas = () => {
+const StarsCanvas: React.FC<StarsProps> = (props) => {
   return (
     <div className=" w-full h-auto absolute inset-0 z-[-1]">
       <Canvas camera={{ position: [0, 0, 1] }}>
-        <Stars />
+        <Stars {...props} />
 
         <Preload all />
       </Canvas>

@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { styles } from "../styles";
-import { SectionWrapper } from "../hoc";
-import { textVariant } from "../utils/motion";
-import { testimonials } from "../constants";
+import { styles } from "../../styles";
+import { SectionWrapper } from "../../hoc";
+import { textVariant } from "../../utils/motion";
+import { testimonials } from "../../constants";
 import FeedbackCard from "./FeedbackCard";
 
 const Feedback = () => {
