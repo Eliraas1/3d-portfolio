@@ -43,7 +43,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         className="bg-tertiary p-5 rounded-2xl  sm:w-[360px] w-full "
       >
         <div className="relative w-full h-[230px] ">
-          <img src={image} className="w-full h-full object-cover" />
+          <img
+            alt={"project " + name}
+            src={image}
+            className="w-full h-full object-cover"
+          />
         </div>
         <div className="absolute inset-0 flex justify-start items-end flex-col m-3 card-image_hover gap-2">
           <div
@@ -63,7 +67,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             >
               <img
                 src={googlePlay}
-                alt="github"
+                alt="google play"
                 className="object-contain w-1/2 h-1/2"
               />
             </div>
@@ -75,7 +79,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             >
               <img
                 src={youtube}
-                alt="github"
+                alt="youtube"
                 className="object-contain w-1/2 h-1/2"
               />
             </div>
@@ -92,6 +96,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 <img
                   src={tag.icon}
                   key={tag.name}
+                  alt={tag.name}
                   className="object-contain h-1/12 w-1/12"
                 />
               )
