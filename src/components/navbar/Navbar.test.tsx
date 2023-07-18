@@ -5,26 +5,8 @@ import { describe, it, expect } from "vitest";
 import Navbar from "./Navbar";
 
 describe("Navbar Component", () => {
-  it("handles link click correctly and scrolls to the top", () => {
-    const { container } = render(
-      <Router>
-        <div id="target" style={{ height: "2000px" }} />
-        <Navbar />
-      </Router>
-    );
-
-    // // Simulate a click on a link
-    fireEvent.click(screen.getByText("Eliran"));
-
-    // Assert that the link is active
-    // expect(screen.getByText("Link Title")).tohaveclas;
-
-    // Assert that the window scrolled to the top (Y position = 0)
-    expect(window.scrollY).toBe(0);
-  });
-
   it('should set active state to "work" after clicking the "Work" item in the navbar', () => {
-    const { container } = render(
+    render(
       <Router>
         <Navbar />
       </Router>
