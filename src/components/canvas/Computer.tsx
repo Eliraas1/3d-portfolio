@@ -32,7 +32,7 @@ const Computers: React.FC<ComputerProps> = ({ isMobile }) => {
   );
 };
 
-const ComputersCanvas:React.FC = () => {
+const ComputersCanvas: React.FC = () => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const ComputersCanvas:React.FC = () => {
     setIsMobile(mediaQuery.matches);
 
     // Define a callback function to handle changes to the media query
-    const handleMediaQueryChange = (event) => {
+    const handleMediaQueryChange = (event: MediaQueryListEvent) => {
       setIsMobile(event.matches);
     };
 
@@ -64,14 +64,14 @@ const ComputersCanvas:React.FC = () => {
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
     >
-      {/* <Suspense fallback={<CanvasLoader />}> */}
-      <OrbitControls
-        enableZoom={false}
-        maxPolarAngle={Math.PI / 2}
-        minPolarAngle={Math.PI / 2}
-      />
-      <Computers isMobile={isMobile} />
-      {/* </Suspense> */}
+      <Suspense fallback={<CanvasLoader />}>
+        <OrbitControls
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+        />
+        <Computers isMobile={isMobile} />
+      </Suspense>
 
       <Preload all />
     </Canvas>

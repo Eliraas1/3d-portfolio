@@ -18,6 +18,7 @@ interface BallProps {
 const Ball: React.FC<BallProps> = ({ icon, name }) => {
   const [decal] = useTexture([icon]);
   return (
+    // @ts-ignore
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
@@ -31,6 +32,7 @@ const Ball: React.FC<BallProps> = ({ icon, name }) => {
           attach="material"
           distort={0.3}
         />
+        {/*  @ts-ignore */}
         <Decal
           position={[0, 0, 1]}
           map={decal}
@@ -44,14 +46,14 @@ const Ball: React.FC<BallProps> = ({ icon, name }) => {
 const BallCanvas: React.FC<BallProps> = (props) => {
   return (
     <Canvas dpr={[1, 2]} gl={{ preserveDrawingBuffer: true }}>
-      {/* <Suspense fallback={<CanvasLoader />}> */}
-      <OrbitControls
-        enableZoom={false}
-        maxPolarAngle={Math.PI / 2}
-        minPolarAngle={Math.PI / 2}
-      />
-      <Ball {...props} />
-      {/* </Suspense> */}
+      <Suspense fallback={<CanvasLoader />}>
+        <OrbitControls
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+        />
+        <Ball {...props} />
+      </Suspense>
 
       <Preload all />
     </Canvas>
