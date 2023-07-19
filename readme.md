@@ -2,6 +2,8 @@
 
 Welcome to my portfolio repository! This is a showcase of my projects and skills developed using Vite, React, React Three Fiber, Tailwind CSS, and tested with Vitest.
 
+![Animated GIF](https://im4.ezgif.com/tmp/ezgif-4-b1eb3fb678.gif)
+
 ## Table of Contents
 
 - [About](#about)
@@ -48,7 +50,10 @@ To run this portfolio locally, follow these steps:
 
 After completing the installation steps, you can start the development server by running the following command:
 
-`npm run dev`
+```
+npm run dev
+```
+
 This will start the development server, and you can access the portfolio in your browser.
 
 Feel free to modify the code and customize the portfolio according to your needs. Add your projects, update the content, and make it your own!
@@ -56,7 +61,10 @@ Feel free to modify the code and customize the portfolio according to your needs
 ## Testing
 
 Testing for this portfolio is done using Vitest, a testing framework for Vite applications. To run the tests, use the following command:
-`npm run test`
+
+```
+npm run test
+```
 
 This will execute the test suite and provide you with the results.
 
