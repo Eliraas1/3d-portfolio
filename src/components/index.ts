@@ -12,7 +12,7 @@ import Experience from "./experience/Experience";
 import ExperienceCard from "./experience/ExperienceCard";
 import Works from "./works/Works";
 import Feedbacks from "./feedback/Feedback";
-import Contact from "./Contact";
+import Contact from "./contact/Contact";
 import CanvasLoader from "./Loader";
 import ServiceCard from "./about/ServiceCard";
 
