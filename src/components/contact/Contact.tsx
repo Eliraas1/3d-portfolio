@@ -1,46 +1,38 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import { styles } from "../styles";
+import { styles } from "../../styles";
 import { sendForm } from "@emailjs/browser";
-import { SectionWrapper } from "../hoc";
-import { slideIn } from "../utils/motion";
-import { EarthCanvas } from "./canvas";
+import { SectionWrapper } from "../../hoc";
+import { slideIn } from "../../utils/motion";
+import { EarthCanvas } from "../canvas";
 
-const SERVICE_ID = import.meta.env.VITE_SERVICE_ID + "sadasdasdasdasdasd";
-const PUBLIC_KEY =
-  import.meta.env.VITE_EMAIL_PUBLIC_KEY + "asdasdasdasdasdasdasdasdasd";
+const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_EMAIL_PUBLIC_KEY;
 const TEMPLATE_ID = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
 const SEC = 1000;
-interface FormFieldProps {
-  name: string;
-  label: string;
-  onChange?: (value: string) => void;
-}
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [success, setSuccess] = useState<boolean>(true);
   const [loading, setLoading] = useState<boolean>(false);
+
+  const sendEmail = async () => {
+    const { status, text } = await sendForm(
+      SERVICE_ID,
+      TEMPLATE_ID,
+      formRef.current!,
+      PUBLIC_KEY
+    );
+    const isSuccess = status === 200 || text === "OK";
+    setSuccess(isSuccess);
+    setLoading(false);
+    !formRef?.current?.reset();
+  };
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!formRef?.current) return;
     setLoading(true);
-
-    sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
-      .then(
-        (result) => {
-          setSuccess(true);
-          console.log(result.text);
-        },
-        (error) => {
-          setSuccess(false);
-          console.log({ error: error.text });
-        }
-      )
-      .finally(() => {
-        setLoading(false);
-        formRef?.current?.reset();
-      });
+    sendEmail();
   };
 
   useEffect(() => {
