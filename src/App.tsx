@@ -12,6 +12,7 @@ import {
   StarsCanvas,
 } from "./components";
 import { motion, useScroll } from "framer-motion";
+import { Analytics } from "@vercel/analytics/react";
 
 const App: React.FC = () => {
   const { scrollYProgress } = useScroll();
@@ -38,6 +39,7 @@ const App: React.FC = () => {
           <Contact />
           <StarsCanvas />
         </div>
+        <Analytics />
       </div>
     </BrowserRouter>
   );
