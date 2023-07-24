@@ -2,26 +2,32 @@ import React, { Suspense, useEffect, useRef } from "react";
 import { Canvas, GroupProps, useFrame } from "@react-three/fiber";
 import { OrbitControls, Sphere } from "@react-three/drei";
 import { pointsInner, pointsOuter } from "../../utils/threeD";
-import { CanvasLoader } from "..";
+import { CanvasLoader, Hero } from "..";
 
 const ParticleRing = () => {
   return (
-    <div className="bg-slate-900 w-full h-auto absolute inset-0 z-[-1] ">
-      <Canvas
-        camera={{
-          position: [10, -7, -20],
-        }}
-        style={{
-          height: "100vh",
-        }}
-      >
-        <Suspense fallback={<CanvasLoader />}>
-          <OrbitControls enableZoom={false} />
-          <directionalLight />
-          <pointLight position={[-30, 0, -30]} power={5} />
-          <PointCircle />
-        </Suspense>
-      </Canvas>
+    <div className="bg-slate-900 w-full relative h-auto z-[1] ">
+      <div className="relative">
+        <Canvas
+          camera={{
+            position: [10, -7, -20],
+          }}
+          style={{
+            height: "100vh",
+          }}
+        >
+          <Suspense fallback={<CanvasLoader />}>
+            <OrbitControls enableZoom={false} />
+            <directionalLight />
+            <pointLight position={[-30, 0, -30]} power={5} />
+            <PointCircle />
+          </Suspense>
+        </Canvas>
+      </div>
+
+      <div className="absolute w-full h-full top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]  pointer-events-none ">
+        <Hero />
+      </div>
     </div>
   );
 };

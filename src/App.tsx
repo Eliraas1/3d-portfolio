@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import {
   About,
-  Hero,
   Navbar,
   Contact,
   Feedbacks,
@@ -10,10 +9,10 @@ import {
   Tech,
   Works,
   StarsCanvas,
+  ParticleRing,
 } from "./components";
 import { motion, useScroll } from "framer-motion";
 import { Analytics } from "@vercel/analytics/react";
-import ParticleRing from "./components/hero/ParticleRing";
 
 const App: React.FC = () => {
   const { scrollYProgress } = useScroll();
@@ -26,11 +25,8 @@ const App: React.FC = () => {
         />
         <div>
           <Navbar />
-          <div className="relative">
-            <Hero />
-          </div>
+          <ParticleRing />
         </div>
-        <ParticleRing />
         <About />
         <Experience />
         <div className="relative z-0">
