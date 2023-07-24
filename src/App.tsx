@@ -13,20 +13,24 @@ import {
 } from "./components";
 import { motion, useScroll } from "framer-motion";
 import { Analytics } from "@vercel/analytics/react";
+import ParticleRing from "./components/hero/ParticleRing";
 
 const App: React.FC = () => {
   const { scrollYProgress } = useScroll();
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary relative">
+      <div className="relative z-0 bg-primary">
         <motion.div
           className="progress-bar"
           style={{ scaleX: scrollYProgress }}
         />
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center ">
+        <div>
           <Navbar />
-          <Hero />
+          <div className="relative">
+            <Hero />
+          </div>
         </div>
+        <ParticleRing />
         <About />
         <Experience />
         <div className="relative z-0">

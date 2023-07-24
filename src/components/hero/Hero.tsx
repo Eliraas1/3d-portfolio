@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
-import { resume, linkedin } from "../assets";
+import { styles } from "../../styles";
+import { ComputersCanvas, ProfileSphereCanvas } from "../canvas";
+import { resume, linkedin } from "../../assets";
 
 const Hero = () => {
   return (
@@ -43,10 +43,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className=" h-full w-full ">
-        <ComputersCanvas />
-      </div>
-
       <div className="absolute xs:-bottom-10 -bottom-0 w-full flex justify-center items-center ">
         <a href="#about">
           <div className="w-[30px] h-[55px] rounded-3xl border-4 border-secondary flex justify-center items-start p-1">
