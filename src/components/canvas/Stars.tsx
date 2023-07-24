@@ -6,23 +6,29 @@ import { CanvasLoader } from "..";
 
 type StarsProps = {
   numOfStars?: number;
+  size?: number;
+  color?: string;
 };
-const Stars: React.FC<StarsProps> = ({ numOfStars }, props) => {
+const Stars: React.FC<StarsProps> = (
+  { numOfStars = 7000, size = 0.002, color = "#f272c8" },
+  props
+) => {
   const ref = useRef();
-  const sphere = random.inSphere(new Float32Array(numOfStars || 7000), {
+  const sphere = random.inSphere(new Float32Array(numOfStars), {
     radius: 2,
   });
+
   useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 40;
-    ref.current.rotation.y -= delta / 30;
+    ref.current.rotation.x -= delta / 25;
+    ref.current.rotation.y -= delta / 42;
   });
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
       <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
         <PointMaterial
           transparent
-          color="#f272c8"
-          size={0.002}
+          color={color}
+          size={size}
           sizeAttenuation={true}
           depthWrite
         />
