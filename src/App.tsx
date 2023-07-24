@@ -18,12 +18,12 @@ const App: React.FC = () => {
   const { scrollYProgress } = useScroll();
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary">
+      <div className="relative z-0 bg-primary overflow-hidden">
         <motion.div
           className="progress-bar"
           style={{ scaleX: scrollYProgress }}
         />
-        <div>
+        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar />
           <ParticleRing />
         </div>
