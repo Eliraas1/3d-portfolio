@@ -1,35 +1,20 @@
-import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { styles } from "../../styles";
-// import { ComputersCanvas } from "./canvas";
-import { resume, linkedin } from "../../assets";
+import React from "react";
+import { motion } from "framer-motion";
+import { styles } from "../styles";
+import { ComputersCanvas } from "./canvas";
+import { resume, linkedin } from "../assets";
 
-const HeroContent = () => {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-  const contentX = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-  const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-  const lineY = useTransform(scrollYProgress, [0, 1], ["0%", "-2000%"]);
+const Hero = () => {
   return (
-    <section
-      className="relative w-full h-screen mx-auto flex flex-col"
-      ref={ref}
-    >
-      <motion.div
-        style={{ y: contentY }}
+    <section className="relative w-full h-screen mx-auto flex flex-col">
+      <div
         className={`${styles.padding} w-full h-1/2 max-w-7xl mx-auto  flex flex-row items-start gap-5`}
       >
-        <motion.div
-          style={{ x: lineY }}
-          className="flex flex-col justify-center items-center mt-5 "
-        >
+        <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915eff]" />
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
-        </motion.div>
-        <motion.div style={{ x: contentX }}>
+        </div>
+        <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
             Hi, I'm <span className="text-[#915eff]">Eliran</span>
           </h1>
@@ -42,7 +27,7 @@ const HeroContent = () => {
               href="https://www.linkedin.com/in/eliran-ashtamker/"
               target="_blank"
               rel="noopener noreferrer"
-              className="mr-4 cursor-pointer hover:opacity-70"
+              className="mr-4 cursor-pointer"
             >
               <img
                 src={linkedin}
@@ -52,14 +37,17 @@ const HeroContent = () => {
             </a>
             <a href={resume} download>
               <button className="bg-[#915eff] hover:bg-[#915effb1] text-white font-bold py-1 px-4 rounded">
-                Resume
+                Download Resume
               </button>
             </a>
           </div>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
+      <div className=" h-full w-full ">
+        <ComputersCanvas />
+      </div>
 
-      {/* <div className="absolute xs:-bottom-10 -bottom-0 w-full flex justify-center items-center ">
+      <div className="absolute xs:-bottom-10 -bottom-0 w-full flex justify-center items-center ">
         <a href="#about">
           <div className="w-[30px] h-[55px] rounded-3xl border-4 border-secondary flex justify-center items-start p-1">
             <motion.div
@@ -75,9 +63,9 @@ const HeroContent = () => {
             />
           </div>
         </a>
-      </div> */}
+      </div>
     </section>
   );
 };
 
-export default HeroContent;
+export default Hero;
