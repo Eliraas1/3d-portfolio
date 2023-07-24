@@ -43,7 +43,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className=" h-full w-full ">
+      <div className=" h-full w-full hidden sm:block">
         <ComputersCanvas />
       </div>
 

@@ -18,7 +18,7 @@ const App: React.FC = () => {
   const { scrollYProgress } = useScroll();
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary relative">
+      <div className="relative z-0 bg-primary overflow-hidden">
         <motion.div
           className="progress-bar"
           style={{ scaleX: scrollYProgress }}
