@@ -4,7 +4,8 @@ import {
   ComputersCanvas,
   StarsCanvas,
 } from "./canvas";
-import Hero from "./Hero";
+import Hero from "./hero/Hero";
+import ParticleRing from "./hero/ParticleRing";
 import Navbar from "./navbar/Navbar";
 import About from "./about/About";
 import Tech from "./Tech";
@@ -32,4 +33,5 @@ export {
   StarsCanvas,
   ServiceCard,
   ExperienceCard,
+  ParticleRing,
 };

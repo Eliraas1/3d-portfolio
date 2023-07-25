@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import {
   About,
-  Hero,
   Navbar,
   Contact,
   Feedbacks,
@@ -10,6 +9,7 @@ import {
   Tech,
   Works,
   StarsCanvas,
+  ParticleRing,
 } from "./components";
 import { motion, useScroll } from "framer-motion";
 import { Analytics } from "@vercel/analytics/react";
@@ -18,18 +18,18 @@ const App: React.FC = () => {
   const { scrollYProgress } = useScroll();
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary relative">
+      <div className="relative z-0 bg-primary overflow-hidden">
         <motion.div
           className="progress-bar"
           style={{ scaleX: scrollYProgress }}
         />
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center ">
+        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar />
-          <Hero />
+          <ParticleRing />
         </div>
         <About />
         <Experience />
-        <div className="relative z-0">
+        <div className="z-[-1] relative ">
           <Tech />
           <StarsCanvas numOfStars={2000} />
         </div>
