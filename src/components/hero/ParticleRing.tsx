@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useRef } from "react";
+import React, { Suspense, useRef } from "react";
 import { Canvas, GroupProps, useFrame } from "@react-three/fiber";
 import { OrbitControls, Sphere } from "@react-three/drei";
 import { pointsInner, pointsOuter } from "../../utils/threeD";
@@ -8,7 +8,7 @@ const ParticleRing = () => {
   return (
     <div className="w-full relative h-auto ">
       <div className="h-screen w-full">
-        <div className="hidden sm:block z-[0]">
+        <div className="z-[0]">
           <Canvas
             camera={{
               position: [10, -7, -20],

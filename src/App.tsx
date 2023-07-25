@@ -29,7 +29,7 @@ const App: React.FC = () => {
         </div>
         <About />
         <Experience />
-        <div className="relative z-0">
+        <div className="z-[-1] relative ">
           <Tech />
           <StarsCanvas numOfStars={2000} />
         </div>
