@@ -2,7 +2,7 @@ import React from "react";
 import { render, fireEvent, screen } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { describe, it, expect } from "vitest";
-import Navbar from "./Navbar";
+import Navbar from "../../components/navbar/Navbar";
 
 describe("Navbar Component", () => {
   it('should set active state to "work" after clicking the "Work" item in the navbar', () => {

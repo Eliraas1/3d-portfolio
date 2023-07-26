@@ -1,7 +1,7 @@
 import React from "react";
 import { render, fireEvent, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../../components/works/ProjectCard";
 import { nodejs, reactNative } from "../../assets";
 
 describe("ProjectCard", () => {

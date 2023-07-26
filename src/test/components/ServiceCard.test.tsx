@@ -1,7 +1,7 @@
 import React from "react";
 import { render, fireEvent, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
-import ServiceCard from "./ServiceCard";
+import ServiceCard from "../../components/about/ServiceCard";
 
 describe("ServiceCard", () => {
   const service = {

@@ -1,7 +1,7 @@
 import React from "react";
 import { render, fireEvent, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
-import FeedbackCard from "./FeedbackCard";
+import FeedbackCard from "../../components/feedback/FeedbackCard";
 
 describe("FeedbackCard", () => {
   const feedback = {
