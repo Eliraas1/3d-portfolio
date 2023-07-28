@@ -27,7 +27,7 @@ const ParticleRing = () => {
         </div>
       </div>
 
-      <div className="absolute w-full h-full top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
+      <div className="absolute w-full h-full top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] xl:-translate-x-[100%] xl:w-auto">
         <Hero />
       </div>
     </div>
